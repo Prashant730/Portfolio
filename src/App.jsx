@@ -217,6 +217,39 @@ function App() {
               </button>
             </div>
           </div>
+          <figure className="developer-animation" aria-hidden="true">
+            <div className="developer">
+              <div className="developer__head">
+                <span className="developer__eye developer__eye--left"></span>
+                <span className="developer__eye developer__eye--right"></span>
+                <span className="developer__glasses"></span>
+                <span className="developer__smile"></span>
+              </div>
+              <div className="developer__body">
+                <span className="developer__tie"></span>
+              </div>
+              <div className="developer__arm developer__arm--left"></div>
+              <div className="developer__arm developer__arm--right"></div>
+              <div className="developer__laptop">
+                <span className="developer__screen">
+                  <span className="developer__code developer__code--1"></span>
+                  <span className="developer__code developer__code--2"></span>
+                  <span className="developer__code developer__code--3"></span>
+                </span>
+                <span className="developer__keyboard"></span>
+              </div>
+              <div className="developer__legs">
+                <span className="developer__leg developer__leg--left"></span>
+                <span className="developer__leg developer__leg--right"></span>
+              </div>
+              <div className="developer__shadow"></div>
+            </div>
+            <div className="floating-icons">
+              <span className="floating-icon floating-icon--react">&lt;/&gt;</span>
+              <span className="floating-icon floating-icon--js">JS</span>
+              <span className="floating-icon floating-icon--git">⚙</span>
+            </div>
+          </figure>
         </section>
 
         {/* About Section */}
