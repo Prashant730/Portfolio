@@ -422,10 +422,59 @@ function App() {
             <span className="inline-block w-1 h-8 bg-gradient-to-b from-green-500 to-emerald-400 rounded-full"></span>
             Technical Skills
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 xl:gap-7 max-w-[1200px] mx-auto">
-            <article className="bg-[var(--bg-primary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--accent)]">
-              <h3 className="text-base font-semibold mb-4 text-[var(--text-primary)] flex items-center gap-2.5 pb-3 border-b-2 border-[var(--border)]">
-                <span className="text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]" aria-hidden="true">🖥️</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 xl:gap-8 max-w-[900px] mx-auto">
+            <article className="bg-[var(--bg-primary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-green-500/50">
+              <h3 className="text-base font-semibold mb-4 text-[var(--text-primary)] flex items-center gap-2.5 pb-3 border-b-2 border-green-500/30">
+                <span className="text-xl" aria-hidden="true">💻</span>
+                Languages
+              </h3>
+              <ul className="list-none">
+                {skills.languages.map((skill, index) => (
+                  <li
+                    key={index}
+                    className={`py-3 px-3.5 -mx-3.5 border-b border-[var(--border)] cursor-pointer transition-all duration-300 rounded-lg relative last:border-b-0 ${
+                      hoveredSkill === `languages-${index}`
+                        ? 'translate-x-1.5 bg-gradient-to-r from-[rgba(65,74,55,0.08)] to-transparent dark:from-[rgba(212,175,55,0.1)] shadow-[0_0_0_1px_rgba(65,74,55,0.15),0_4px_12px_rgba(65,74,55,0.1)] dark:shadow-[0_0_0_1px_rgba(212,175,55,0.2),0_4px_12px_rgba(212,175,55,0.15)]'
+                        : ''
+                    }`}
+                    onMouseEnter={() => setHoveredSkill(`languages-${index}`)}
+                    onMouseLeave={() => setHoveredSkill(null)}
+                  >
+                    <div className="flex justify-between items-center mb-2">
+                      <span className={`text-sm font-medium transition-colors ${hoveredSkill === `languages-${index}` ? 'text-[var(--text-primary)]' : 'text-[var(--text-secondary)]'}`}>
+                        {skill.name}
+                      </span>
+                      <span className={`text-xs font-bold py-1.5 px-3 rounded-md whitespace-nowrap uppercase tracking-wider transition-transform border-2 border-transparent ${
+                        hoveredSkill === `languages-${index}` ? 'scale-110 animate-pulse-badge' : ''
+                      } ${
+                        skill.level.toLowerCase() === 'strong'
+                          ? 'bg-gradient-to-br from-[#414A37] to-[#5a6b4a] text-white border-[#414A37] shadow-[0_2px_8px_rgba(65,74,55,0.35)] dark:from-[#16a34a] dark:to-[#22c55e] dark:border-[#22c55e] dark:shadow-[0_2px_12px_rgba(34,197,94,0.5)]'
+                          : skill.level.toLowerCase() === 'intermediate'
+                          ? 'bg-gradient-to-br from-[#99744A] to-[#b8956a] text-white border-[#99744A] shadow-[0_2px_8px_rgba(153,116,74,0.35)] dark:from-[#ca8a04] dark:to-[#eab308] dark:text-zinc-900 dark:border-[#eab308] dark:shadow-[0_2px_12px_rgba(234,179,8,0.5)]'
+                          : 'bg-gradient-to-br from-[#7a8a9a] to-[#9aa8b8] text-white border-[#7a8a9a] shadow-[0_2px_8px_rgba(122,138,154,0.35)] dark:from-[#2563eb] dark:to-[#3b82f6] dark:border-[#3b82f6] dark:shadow-[0_2px_12px_rgba(59,130,246,0.5)]'
+                      }`}>
+                        {skill.level}
+                      </span>
+                    </div>
+                    <div className="h-1.5 bg-[var(--bg-tertiary)] rounded-sm overflow-hidden">
+                      <div
+                        className={`skill-progress h-full rounded-sm ${
+                          skill.level.toLowerCase() === 'strong'
+                            ? 'bg-gradient-to-r from-[#414A37] to-[#5a6b4a] shadow-[0_0_8px_rgba(65,74,55,0.4)] dark:from-[#22c55e] dark:to-[#4ade80] dark:shadow-[0_0_12px_rgba(34,197,94,0.5)]'
+                            : skill.level.toLowerCase() === 'intermediate'
+                            ? 'bg-gradient-to-r from-[#99744A] to-[#b8956a] shadow-[0_0_8px_rgba(153,116,74,0.4)] dark:from-[#eab308] dark:to-[#facc15] dark:shadow-[0_0_12px_rgba(234,179,8,0.5)]'
+                            : 'bg-gradient-to-r from-[#a89080] to-[#c4b0a0] shadow-[0_0_8px_rgba(168,144,128,0.4)] dark:from-[#3b82f6] dark:to-[#60a5fa] dark:shadow-[0_0_12px_rgba(59,130,246,0.5)]'
+                        }`}
+                        style={{ width: hoveredSkill === `languages-${index}` ? `${skill.percent}%` : '0%' }}
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </article>
+            <article className="bg-[var(--bg-primary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-green-500/50">
+              <h3 className="text-base font-semibold mb-4 text-[var(--text-primary)] flex items-center gap-2.5 pb-3 border-b-2 border-green-500/30">
+                <span className="text-xl" aria-hidden="true">🖥️</span>
                 Backend
               </h3>
               <ul className="list-none">
@@ -472,9 +521,9 @@ function App() {
                 ))}
               </ul>
             </article>
-            <article className="bg-[var(--bg-primary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--accent)]">
-              <h3 className="text-base font-semibold mb-4 text-[var(--text-primary)] flex items-center gap-2.5 pb-3 border-b-2 border-[var(--border)]">
-                <span className="text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]" aria-hidden="true">🎨</span>
+            <article className="bg-[var(--bg-primary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-green-500/50">
+              <h3 className="text-base font-semibold mb-4 text-[var(--text-primary)] flex items-center gap-2.5 pb-3 border-b-2 border-green-500/30">
+                <span className="text-xl" aria-hidden="true">🎨</span>
                 Frontend
               </h3>
               <ul className="list-none">
@@ -521,9 +570,9 @@ function App() {
                 ))}
               </ul>
             </article>
-            <article className="bg-[var(--bg-primary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--accent)]">
-              <h3 className="text-base font-semibold mb-4 text-[var(--text-primary)] flex items-center gap-2.5 pb-3 border-b-2 border-[var(--border)]">
-                <span className="text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]" aria-hidden="true">🛠️</span>
+            <article className="bg-[var(--bg-primary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-green-500/50">
+              <h3 className="text-base font-semibold mb-4 text-[var(--text-primary)] flex items-center gap-2.5 pb-3 border-b-2 border-green-500/30">
+                <span className="text-xl" aria-hidden="true">🛠️</span>
                 Tools & Platforms
               </h3>
               <ul className="list-none">
@@ -845,13 +894,13 @@ function App() {
               I'm currently seeking internship and new grad opportunities. Feel free to reach out if you think
               I'd be a good fit for your team.
             </p>
-            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-3">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-3 mt-8">
               <a
                 href="mailto:pk1819544@gmail.com"
                 className="group flex items-center justify-center gap-2.5 text-[var(--text-secondary)] no-underline py-3.5 px-4 sm:px-5 bg-[var(--bg-primary)] border border-[var(--border)] rounded-xl transition-all duration-300 text-sm font-medium min-h-[44px] hover:border-green-500 hover:text-green-600 dark:hover:text-green-400 hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-2"
                 aria-label="Send email to pk1819544@gmail.com"
               >
-                <span className="text-lg group-hover:scale-110 transition-transform">📧</span> pk1819544@gmail.com
+                <span className="text-lg group-hover:scale-110 transition-transform">📧</span>Email
               </a>
               <a
                 href="https://github.com/Prashant730"
@@ -860,7 +909,7 @@ function App() {
                 className="group flex items-center justify-center gap-2.5 text-[var(--text-secondary)] no-underline py-3.5 px-4 sm:px-5 bg-[var(--bg-primary)] border border-[var(--border)] rounded-xl transition-all duration-300 text-sm font-medium min-h-[44px] hover:border-green-500 hover:text-green-600 dark:hover:text-green-400 hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-2"
                 aria-label="Visit GitHub profile"
               >
-                <span className="text-lg group-hover:scale-110 transition-transform">💻</span> github.com/Prashant730
+                <span className="text-lg group-hover:scale-110 transition-transform">💻</span>GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/prashant-kumar-r13/"
@@ -869,12 +918,14 @@ function App() {
                 className="group flex items-center justify-center gap-2.5 text-[var(--text-secondary)] no-underline py-3.5 px-4 sm:px-5 bg-[var(--bg-primary)] border border-[var(--border)] rounded-xl transition-all duration-300 text-sm font-medium min-h-[44px] hover:border-green-500 hover:text-green-600 dark:hover:text-green-400 hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-2"
                 aria-label="Visit LinkedIn profile"
               >
-                <span className="text-lg group-hover:scale-110 transition-transform">💼</span> linkedin.com/in/prashant-kumar-r13
+                <span className="text-lg group-hover:scale-110 transition-transform">💼</span>LinkedIn
               </a>
+            </div>
+            <div className="flex justify-center mt-6">
               <a
                 href="/generalCV.pdf"
                 download
-                className="group flex items-center justify-center gap-2.5 text-white no-underline py-3.5 px-4 sm:px-5 bg-gradient-to-r from-green-600 to-emerald-500 border-2 border-green-700 rounded-xl transition-all duration-300 text-sm font-bold min-h-[44px] shadow-md hover:shadow-xl hover:-translate-y-0.5 hover:from-green-700 hover:to-emerald-600 focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-2"
+                className="group flex items-center justify-center gap-2.5 text-white no-underline py-3.5 px-6 sm:px-7 bg-gradient-to-r from-green-600 to-emerald-500 border-2 border-green-700 rounded-xl transition-all duration-300 text-sm font-bold min-h-[44px] shadow-md hover:shadow-xl hover:-translate-y-0.5 hover:from-green-700 hover:to-emerald-600 focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-2"
                 aria-label="Download resume (PDF)"
               >
                 <span className="text-lg group-hover:scale-110 group-hover:animate-bounce transition-transform">📄</span> Download Resume
