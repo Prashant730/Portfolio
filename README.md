@@ -85,8 +85,8 @@ Portfolio/
 ├── public/                       # Static assets
 │   ├── picture.jpg              # Profile image
 │   ├── Cloud Computing.pdf      # Certificates
-│   ├── CPP Certificate.png
-│   ├── Mind Sprint Certificate.png
+│   ├── CPP Certificate.pdf
+│   ├── Mind Sprint Certificate.pdf
 │   └── generalCV.pdf            # Resume/CV
 │
 ├── src/
@@ -268,7 +268,7 @@ MIT License - Feel free to use this as a template for your own portfolio!
 
 **Prashant Kumar**
 
-- 🌐 Portfolio: [prashantkumar.dev](https://prashantkumar.dev)
+- 🌐 Portfolio: [prashantkumar.dev](https://portfolio-rosy-iota-11.vercel.app/)
 - 💼 LinkedIn: [prashant-kumar-r13](https://www.linkedin.com/in/prashant-kumar-r13/)
 - 🐙 GitHub: [@Prashant730](https://github.com/Prashant730)
 - 📧 Email: pk1819544@gmail.com
@@ -287,5 +287,3 @@ MIT License - Feel free to use this as a template for your own portfolio!
 **⭐ If you like this portfolio, give it a star on GitHub!**
 
 ---
-
-_Last Updated: December 2025_
