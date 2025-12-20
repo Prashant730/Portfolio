@@ -723,88 +723,90 @@ function App() {
             Education & Certifications
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 xl:gap-7">
-            <article className="bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
+            <article className="education-card bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
               <h3 className="text-xs font-bold mb-4 text-green-600 dark:text-green-400 uppercase tracking-wider flex items-center gap-2">
                 <span className="text-base">🎓</span>
                 Education
               </h3>
-              <div className="pb-4 mb-4 border-b border-[var(--border)]">
+              <div className="education-item">
                 <h4 className="text-base font-semibold text-[var(--text-primary)] mb-1">B.Tech in Computer Science</h4>
                 <p className="text-[var(--text-secondary)] text-base mb-1">Lovely Professional University (2023 - 2027)</p>
-                <p className="text-[var(--accent)] font-semibold text-sm mb-3">CGPA: 6.76</p>
+                <p className="text-[var(--accent)] font-semibold text-sm">CGPA: 6.76</p>
               </div>
-              <div className="pb-4 mb-4 border-b border-[var(--border)]">
+              <div className="border-b border-[var(--border)] my-2"></div>
+              <div className="education-item">
                 <h4 className="text-base font-semibold text-[var(--text-primary)] mb-1">Class 12th (Intermediate)</h4>
                 <p className="text-[var(--text-secondary)] text-base mb-1">Dr. D Ram D.A.V Public School, March 2022</p>
-                <p className="text-[var(--accent)] font-semibold text-sm mb-3">Percentage: 78%</p>
+                <p className="text-[var(--accent)] font-semibold text-sm">Percentage: 78%</p>
               </div>
-              <div>
+              <div className="border-b border-[var(--border)] my-2"></div>
+              <div className="education-item">
                 <h4 className="text-base font-semibold text-[var(--text-primary)] mb-1">Class 10th (Matriculation)</h4>
                 <p className="text-[var(--text-secondary)] text-base mb-1">Dr. D Ram D.A.V Public School, March 2020</p>
                 <p className="text-[var(--accent)] font-semibold text-sm">Percentage: 86.40%</p>
               </div>
             </article>
-            <article className="bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
+            <article className="education-card bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
               <h3 className="text-xs font-bold mb-4 text-green-600 dark:text-green-400 uppercase tracking-wider flex items-center gap-2">
                 <span className="text-base">📜</span>
                 Certifications
               </h3>
-              <ul className="list-none">
-                <li className="pb-4 mb-4 border-b border-[var(--border)]">
-                  <div className="flex justify-between items-start gap-3">
-                    <div>
-                      <h4 className="text-base font-semibold text-[var(--text-primary)] mb-0.5">Cloud Computing</h4>
-                      <p className="text-[var(--text-secondary)] text-sm mb-0.5">NPTEL — IIT Kharagpur</p>
-                      <span className="block text-[var(--text-muted)] text-[13px]">Jan 2025 – Apr 2025 • 12-week certified course</span>
-                    </div>
-                    <a
-                      href="/Cloud Computing.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors py-1.5 px-3 rounded-md border border-green-600/30 dark:border-green-400/30 hover:bg-green-50 dark:hover:bg-green-900/20"
-                      aria-label="View Cloud Computing certificate"
-                    >
-                      <span aria-hidden="true">📄</span>
-                    </a>
+              <div className="cert-item">
+                <div className="flex justify-between items-start gap-3">
+                  <div>
+                    <h4 className="text-base font-semibold text-[var(--text-primary)] mb-0.5">Cloud Computing</h4>
+                    <p className="text-[var(--text-secondary)] text-sm mb-0.5">NPTEL — IIT Kharagpur</p>
+                    <span className="block text-[var(--text-muted)] text-[13px]">Jan 2025 – Apr 2025 • 12-week certified course</span>
                   </div>
-                </li>
-                <li className="pb-4 mb-4 border-b border-[var(--border)]">
-                  <div className="flex justify-between items-start gap-3">
-                    <div>
-                      <h4 className="text-base font-semibold text-[var(--text-primary)] mb-0.5">C++ Programming (OOPs & DSA)</h4>
-                      <p className="text-[var(--text-secondary)] text-sm mb-0.5">CSE Pathshala</p>
-                      <span className="block text-[var(--text-muted)] text-[13px]">Jun 2025 – Jul 2025 • 35+ hours summer training</span>
-                    </div>
-                    <a
-                      href="/public/RUID1fc6c099c114455abcdd5d62a2b46281.png"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors py-1.5 px-3 rounded-md border border-green-600/30 dark:border-green-400/30 hover:bg-green-50 dark:hover:bg-green-900/20"
-                      aria-label="View C++ Programming certificate"
-                    >
-                      <span aria-hidden="true">📄</span>
-                    </a>
+                  <a
+                    href="/Cloud Computing.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors py-1.5 px-3 rounded-md border border-green-600/30 dark:border-green-400/30 hover:bg-green-50 dark:hover:bg-green-900/20"
+                    aria-label="View Cloud Computing certificate"
+                  >
+                    <span aria-hidden="true">📄</span>
+                  </a>
+                </div>
+              </div>
+              <div className="border-b border-[var(--border)] my-2"></div>
+              <div className="cert-item">
+                <div className="flex justify-between items-start gap-3">
+                  <div>
+                    <h4 className="text-base font-semibold text-[var(--text-primary)] mb-0.5">C++ Programming (OOPs & DSA)</h4>
+                    <p className="text-[var(--text-secondary)] text-sm mb-0.5">CSE Pathshala</p>
+                    <span className="block text-[var(--text-muted)] text-[13px]">Jun 2025 – Jul 2025 • 35+ hours summer training</span>
                   </div>
-                </li>
-                <li>
-                  <div className="flex justify-between items-start gap-3">
-                    <div>
-                      <h4 className="text-base font-semibold text-[var(--text-primary)] mb-0.5">Mind Sprint 48-Hour International Hackathon</h4>
-                      <p className="text-[var(--text-secondary)] text-sm mb-0.5">Unstop — Participant</p>
-                      <span className="block text-[var(--text-muted)] text-[13px]">2025</span>
-                    </div>
-                    <a
-                      href="/public/RUID87d1cfd744dd4270be24d449f9d6e9dc.jpg"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors py-1.5 px-3 rounded-md border border-green-600/30 dark:border-green-400/30 hover:bg-green-50 dark:hover:bg-green-900/20"
-                      aria-label="View Mind Sprint Hackathon certificate"
-                    >
-                      <span aria-hidden="true">📄</span>
-                    </a>
+                  <a
+                    href="/cpp.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors py-1.5 px-3 rounded-md border border-green-600/30 dark:border-green-400/30 hover:bg-green-50 dark:hover:bg-green-900/20"
+                    aria-label="View C++ Programming certificate"
+                  >
+                    <span aria-hidden="true">📄</span>
+                  </a>
+                </div>
+              </div>
+              <div className="border-b border-[var(--border)] my-2"></div>
+              <div className="cert-item">
+                <div className="flex justify-between items-start gap-3">
+                  <div>
+                    <h4 className="text-base font-semibold text-[var(--text-primary)] mb-0.5">Mind Sprint 48-Hour International Hackathon</h4>
+                    <p className="text-[var(--text-secondary)] text-sm mb-0.5">Unstop — Participant</p>
+                    <span className="block text-[var(--text-muted)] text-[13px]">2025</span>
                   </div>
-                </li>
-              </ul>
+                  <a
+                    href="/hackathon.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors py-1.5 px-3 rounded-md border border-green-600/30 dark:border-green-400/30 hover:bg-green-50 dark:hover:bg-green-900/20"
+                    aria-label="View Mind Sprint Hackathon certificate"
+                  >
+                    <span aria-hidden="true">📄</span>
+                  </a>
+                </div>
+              </div>
             </article>
           </div>
         </section>

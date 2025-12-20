@@ -558,6 +558,37 @@ body {
   animation: pulse-badge 1.5s ease-in-out infinite;
 }
 
+/* Education hover effect */
+.education-item {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 0 -10px;
+  position: relative;
+}
+
+.education-item:hover {
+  transform: translateY(-4px);
+  background-color: var(--bg-tertiary);
+  z-index: 10;
+}
+
+.cert-item {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 0 -10px;
+  position: relative;
+}
+
+.cert-item:hover {
+  transform: translateY(-4px);
+  background-color: var(--bg-tertiary);
+  z-index: 10;
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
