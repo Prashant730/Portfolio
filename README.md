@@ -18,7 +18,6 @@
 - 🚀 **Performance Optimized** – Fast loading, smooth scrolling, lazy loading
 - 🎭 **Interactive Elements** – Profile image enlargement, expandable projects, skill progress bars
 - 📄 **Downloadable Certificates** – Direct links to view certifications
-- 🔒 **SEO Ready** – Proper meta tags, semantic HTML, structured data
 - 💼 **Professional Sections** – About, Skills, Projects, Education, Certifications, Contact
 
 ---
