@@ -589,6 +589,30 @@ body {
   z-index: 10;
 }
 
+.achievement-item {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 0 -10px;
+  position: relative;
+}
+
+.achievement-item:hover {
+  transform: translateY(-4px);
+  background-color: var(--bg-tertiary);
+  z-index: 10;
+}
+
+/* Card hover effect */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-6px);
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,

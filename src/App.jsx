@@ -723,7 +723,7 @@ function App() {
             Education & Certifications
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 xl:gap-7">
-            <article className="education-card bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
+            <article className="hover-card education-card bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
               <h3 className="text-xs font-bold mb-4 text-green-600 dark:text-green-400 uppercase tracking-wider flex items-center gap-2">
                 <span className="text-base">🎓</span>
                 Education
@@ -746,7 +746,7 @@ function App() {
                 <p className="text-[var(--accent)] font-semibold text-sm">Percentage: 86.40%</p>
               </div>
             </article>
-            <article className="education-card bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
+            <article className="hover-card education-card bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
               <h3 className="text-xs font-bold mb-4 text-green-600 dark:text-green-400 uppercase tracking-wider flex items-center gap-2">
                 <span className="text-base">📜</span>
                 Certifications
@@ -817,9 +817,9 @@ function App() {
             <span className="inline-block w-1 h-8 bg-gradient-to-b from-green-500 to-emerald-400 rounded-full"></span>
             Achievements
           </h2>
-          <div className="bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
+          <div className="hover-card bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
             {achievements.map((achievement, index) => (
-              <article key={index} className={`flex gap-4 py-4 ${index === 0 ? 'pt-0' : ''} ${index === achievements.length - 1 ? 'pb-0 border-b-0' : 'border-b border-[var(--border)]'}`}>
+              <article key={index} className={`achievement-item flex gap-4 py-4 ${index === 0 ? 'pt-0' : ''} ${index === achievements.length - 1 ? 'pb-0 border-b-0' : 'border-b border-[var(--border)]'}`}>
                 <span className="text-2xl flex-shrink-0 w-8 text-center" aria-hidden="true">{achievement.icon}</span>
                 <div>
                   <h4 className="text-base font-semibold text-[var(--text-primary)] mb-1">{achievement.title}</h4>
