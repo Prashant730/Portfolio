@@ -268,7 +268,7 @@ MIT License - Feel free to use this as a template for your own portfolio!
 
 **Prashant Kumar**
 
-- 🌐 Portfolio: [prashantkumar.dev](https://portfolio-rosy-iota-11.vercel.app/)
+- 🌐 Portfolio: [prashantkumar.app](https://portfolio-rosy-iota-11.vercel.app/)
 - 💼 LinkedIn: [prashant-kumar-r13](https://www.linkedin.com/in/prashant-kumar-r13/)
 - 🐙 GitHub: [@Prashant730](https://github.com/Prashant730)
 - 📧 Email: pk1819544@gmail.com
