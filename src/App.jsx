@@ -10,6 +10,7 @@ function App() {
   const [expandedProject, setExpandedProject] = useState(null)
   const [hoveredSkill, setHoveredSkill] = useState(null)
   const [showBackToTop, setShowBackToTop] = useState(false)
+  const [hasProfileImage, setHasProfileImage] = useState(true)
   const mobileNavRef = useRef(null)
 
   // Initialize theme from localStorage
@@ -198,9 +199,18 @@ function App() {
         <section className="hero-section animate-on-scroll" aria-labelledby="hero-title">
           <div className="hero-content">
             <div className="hero-profile">
-              <div className="profile-image-placeholder" aria-label="Profile photo">
-                <span>PK</span>
-              </div>
+              {hasProfileImage ? (
+                <img
+                  src="/picture.jpg"
+                  alt="Profile photo"
+                  className="profile-image"
+                  onError={() => setHasProfileImage(false)}
+                />
+              ) : (
+                <div className="profile-image-placeholder" aria-label="Profile photo">
+                  <span>PK</span>
+                </div>
+              )}
             </div>
             <h1 id="hero-title" className="hero-title">Prashant Kumar</h1>
             <p className="hero-subtitle">Full-Stack Developer</p>
