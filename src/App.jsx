@@ -321,6 +321,7 @@ function App() {
             </p>
             <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-6 max-w-prose">
               Computer Science student building full-stack web applications using React, Node.js, and MongoDB.
+
                 Actively seeking internship opportunities in software development.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
