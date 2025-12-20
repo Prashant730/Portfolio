@@ -85,8 +85,8 @@ Portfolio/
 ├── public/                       # Static assets
 │   ├── picture.jpg              # Profile image
 │   ├── Cloud Computing.pdf      # Certificates
-│   ├── CPP Certificate.pdf
-│   ├── Mind Sprint Certificate.pdf
+│   ├── CPP Certificate.png
+│   ├── Mind Sprint Certificate.png
 │   └── generalCV.pdf            # Resume/CV
 │
 ├── src/
