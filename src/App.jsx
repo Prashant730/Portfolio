@@ -320,8 +320,8 @@ function App() {
               Full-Stack Developer
             </p>
             <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-6 max-w-prose">
-              CS student building web applications with React, Node.js, and MongoDB.
-              Looking for internship opportunities in software development.
+              Computer Science student building full-stack web applications using React, Node.js, and MongoDB.
+                Actively seeking internship opportunities in software development.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button
@@ -382,12 +382,10 @@ function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr] xl:grid-cols-[1.4fr_1fr] gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
             <div>
               <p className="text-[var(--text-secondary)] leading-relaxed text-sm sm:text-base mb-4">
-                I'm a Computer Science student with a focus on full-stack development and backend engineering.
-                I enjoy solving complex problems through clean, efficient code and building applications that deliver tangible value.
+                I am a Computer Science student focused on full-stack and backend development, building scalable applications through clean, efficient code.
               </p>
               <p className="text-[var(--text-secondary)] leading-relaxed text-sm sm:text-base">
-                My technical interests include distributed systems, API design, and performance optimization.
-                I'm currently exploring cloud technologies and microservices architecture.
+                My interests include API design, distributed systems, and performance optimization. Currently exploring cloud technologies and microservices architecture.
               </p>
             </div>
             <div className="bg-[var(--bg-secondary)] p-5 sm:p-6 xl:p-7 rounded-xl border border-[var(--border)] shadow-sm hover:shadow-lg hover:border-green-500/50 transition-all duration-300">
