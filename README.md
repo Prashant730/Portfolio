@@ -1,53 +1,68 @@
-# ✨ My Creative Portfolio
+# 🚀 Prashant Kumar - Portfolio
 
-> A blazing-fast, modern portfolio built with **React** ⚡ and **Vite** 🚀
-> Showcasing projects, skills, and achievements with style.
+> A modern, responsive, and accessible portfolio website built with **React** and **Tailwind CSS** (CDN)
 
-![React](https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-Latest-purple?logo=vite&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript&logoColor=white)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-CDN-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
-## 🎯 What's Inside?
+## ✨ Features
 
-This is a **lightweight, performant portfolio** designed to showcase your best work. Built on cutting-edge technology with a focus on speed and simplicity.
-
-### ⚡ Key Features
-
-- **Lightning-Fast Development** – Vite's HMR for instant updates
-- **Component-Driven** – Modular, reusable React components
-- **Data-Driven Content** – Manage projects, skills & achievements in clean JSON files
-- **Production-Ready** – Optimized builds and easy deployment
-- **Modern Tooling** – ESLint configured for code quality
+- 🎨 **Modern UI/UX** – Clean, professional design with smooth animations
+- 🌓 **Dark/Light Mode** – Theme toggle with localStorage persistence
+- 📱 **Fully Responsive** – Mobile-first design, works on all devices
+- ♿ **Accessible** – WCAG compliant, keyboard navigation, ARIA labels
+- 🚀 **Performance Optimized** – Fast loading, smooth scrolling, lazy loading
+- 🎭 **Interactive Elements** – Profile image enlargement, expandable projects, skill progress bars
+- 📄 **Downloadable Certificates** – Direct links to view certifications
+- 🔒 **SEO Ready** – Proper meta tags, semantic HTML, structured data
+- 💼 **Professional Sections** – About, Skills, Projects, Education, Certifications, Contact
 
 ---
 
 ## 📋 Prerequisites
 
-- **Node.js** 16+ (check with `node --version`)
+Before you begin, ensure you have:
+
+- **Node.js** 18+ ([Download](https://nodejs.org/))
 - **npm** or **yarn** or **pnpm**
 
+Check your versions:
+
+```bash
+node --version
+npm --version
+```
+
 ---
-<<<<<<< HEAD
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### 1️⃣ Install Dependencies
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Prashant730/Portfolio.git
+cd Portfolio
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 2️⃣ Start Development Server
+### 3. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Your portfolio will be live at `http://localhost:5173` ✨
+Your portfolio will be live at **http://localhost:5173** ✨
 
-### 3️⃣ Build for Production
+### 4. Build for Production
 
 ```bash
 npm run build
@@ -55,16 +70,10 @@ npm run build
 
 Creates an optimized `dist` folder ready for deployment.
 
-### 4️⃣ Preview Production Build
+### 5. Preview Production Build
 
 ```bash
 npm run preview
-```
-
-### 5️⃣ Lint Your Code
-
-```bash
-npm run lint
 ```
 
 ---
@@ -72,69 +81,103 @@ npm run lint
 ## 📁 Project Structure
 
 ```
-src/
-├── App.jsx                 # Main portfolio component
-├── App.css                 # Styling
-├── main.jsx                # React entry point
-├── index.css               # Global styles
-├── data/
-│   ├── index.js            # Data exports
-│   ├── projects.js         # Your projects
-│   ├── skills.js           # Your skills
-│   └── achievements.js     # Your achievements
-└── [components]/           # Add your components here
-
-public/                    # Static assets (images, fonts, etc.)
-index.html                 # HTML entry point
-vite.config.js             # Vite configuration
-eslint.config.js           # ESLint rules
+Portfolio/
+├── public/                       # Static assets
+│   ├── picture.jpg              # Profile image
+│   ├── Cloud Computing.pdf      # Certificates
+│   ├── CPP Certificate.pdf
+│   ├── Mind Sprint Certificate.pdf
+│   └── generalCV.pdf            # Resume/CV
+│
+├── src/
+│   ├── App.jsx                  # Main portfolio component
+│   ├── App.css                  # Custom styles & animations
+│   ├── main.jsx                 # React entry point
+│   ├── index.css                # Base styles
+│   └── data/
+│       ├── index.js             # Data exports
+│       ├── projects.js          # Project details
+│       ├── skills.js            # Technical skills
+│       └── achievements.js      # Achievements & awards
+│
+├── index.html                   # HTML entry (CDN scripts)
+├── vite.config.js              # Vite configuration
+├── eslint.config.js            # ESLint rules
+├── package.json                # Dependencies
+└── README.md                   # This file
 ```
 
 ---
 
 ## ✏️ Customization Guide
 
-### Add Your Projects
+### Update Personal Information
 
-Edit `src/data/projects.js`:
+1. **Profile Image**: Replace `public/picture.jpg` with your photo
+2. **Resume/CV**: Add your resume as `public/resume.pdf`
+3. **Certificates**: Add certificate PDFs to `public/` folder
+
+### Modify Content
+
+#### Projects (`src/data/projects.js`)
 
 ```javascript
 export const projects = [
   {
-    title: 'Amazing Project',
-    description: 'What it does...',
-    link: 'https://...',
-    tags: ['React', 'Vite'],
+    id: 1,
+    title: 'Your Project Name',
+    shortDesc: 'Brief description',
+    tech: ['React', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/username/repo',
+    demo: 'https://your-demo.com',
+    featured: true, // Highlights the project
+    // ...more fields
   },
 ]
 ```
 
-### Update Your Skills
+#### Skills (`src/data/skills.js`)
 
-Edit `src/data/skills.js` with your tech stack.
+```javascript
+export const skills = {
+  backend: [
+    { name: 'Node.js', level: 'Strong', percent: 85 },
+    // ...more skills
+  ],
+  frontend: [
+    { name: 'React', level: 'Strong', percent: 90 },
+    // ...more skills
+  ],
+  tools: [
+    { name: 'Git', level: 'Intermediate', percent: 75 },
+    // ...more tools
+  ],
+}
+```
 
-### Showcase Achievements
+#### Achievements (`src/data/achievements.js`)
 
-Edit `src/data/achievements.js` to highlight your wins.
+```javascript
+export const achievements = [
+  {
+    icon: '🏆',
+    title: 'Your Achievement',
+    description: 'What you accomplished',
+  },
+]
+```
 
-### Style Your Portfolio
+### Customize Styling
 
-Customize `src/App.css` and `src/index.css` to match your brand.
+- **Colors & Theme**: Edit CSS variables in `src/App.css` and `src/index.css`
+- **Tailwind Config**: Modify `tailwind.config` in `index.html` (CDN-based)
+- **Animations**: Customize keyframes in `src/App.css`
 
 ---
 
 ## 🌐 Deployment
 
-Deploy your portfolio **instantly** to any of these platforms:
-
-| Platform         | Command               | Cost        |
-| ---------------- | --------------------- | ----------- |
-| **Vercel**       | `vercel`              | Free        |
-| **Netlify**      | `netlify deploy`      | Free        |
-| **GitHub Pages** | Push to `gh-pages`    | Free        |
-| **Self-Hosted**  | Upload `dist/` folder | Your server |
-
-Example Vercel deployment:
+### Deploy to Vercel (Recommended)
 
 ```bash
 npm run build
@@ -142,166 +185,107 @@ npm install -g vercel
 vercel
 ```
 
----
-
-## 🛠️ Tech Stack
-
-- **React 18** – UI library
-- **Vite** – Next-gen bundler & dev server
-- **JavaScript (ES6+)** – Modern JavaScript
-- **ESLint** – Code quality & consistency
-
----
-
-## 📝 License
-
-MIT License – Feel free to use this template for your portfolio!
-
----
-
-## 🤝 Contributing
-
-This is your personal portfolio! But feel free to fork, customize, and make it your own.
-
----
-
-**Built with ❤️ for developers who want a fast, beautiful portfolio.**
-=======
-
-## 🚀 Getting Started
-
-### 1️⃣ Install Dependencies
-
-```bash
-npm install
-```
-
-### 2️⃣ Start Development Server
-
-```bash
-npm run dev
-```
-
-Your portfolio will be live at `http://localhost:5173` ✨
-
-### 3️⃣ Build for Production
+### Deploy to Netlify
 
 ```bash
 npm run build
+# Drag and drop the `dist` folder to Netlify
 ```
 
-Creates an optimized `dist` folder ready for deployment.
-
-### 4️⃣ Preview Production Build
-
-```bash
-npm run preview
-```
-
-### 5️⃣ Lint Your Code
-
-```bash
-npm run lint
-```
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── App.jsx                 # Main portfolio component
-├── App.css                 # Styling
-├── main.jsx                # React entry point
-├── index.css               # Global styles
-├── data/
-│   ├── index.js            # Data exports
-│   ├── projects.js         # Your projects
-│   ├── skills.js           # Your skills
-│   └── achievements.js     # Your achievements
-└── [components]/           # Add your components here
-
-public/                    # Static assets (images, fonts, etc.)
-index.html                 # HTML entry point
-vite.config.js             # Vite configuration
-eslint.config.js           # ESLint rules
-```
-
----
-
-## ✏️ Customization Guide
-
-### Add Your Projects
-
-Edit `src/data/projects.js`:
-
-```javascript
-export const projects = [
-  {
-    title: 'Amazing Project',
-    description: 'What it does...',
-    link: 'https://...',
-    tags: ['React', 'Vite'],
-  },
-]
-```
-
-### Update Your Skills
-
-Edit `src/data/skills.js` with your tech stack.
-
-### Showcase Achievements
-
-Edit `src/data/achievements.js` to highlight your wins.
-
-### Style Your Portfolio
-
-Customize `src/App.css` and `src/index.css` to match your brand.
-
----
-
-## 🌐 Deployment
-
-Deploy your portfolio **instantly** to any of these platforms:
-
-| Platform         | Command               | Cost        |
-| ---------------- | --------------------- | ----------- |
-| **Vercel**       | `vercel`              | Free        |
-| **Netlify**      | `netlify deploy`      | Free        |
-| **GitHub Pages** | Push to `gh-pages`    | Free        |
-| **Self-Hosted**  | Upload `dist/` folder | Your server |
-
-Example Vercel deployment:
+### Deploy to GitHub Pages
 
 ```bash
 npm run build
-npm install -g vercel
-vercel
+# Push the dist folder to gh-pages branch
 ```
+
+### Environment Considerations
+
+⚠️ **Important**: Files in the `public/` folder are publicly accessible. Do not store sensitive documents there.
+
+For protected files (like private certificates or resumes), consider:
+
+- Using a backend with authentication
+- Password-protecting PDFs
+- Using cloud storage with access control (AWS S3, Google Cloud Storage)
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **React 18** – UI library
-- **Vite** – Next-gen bundler & dev server
-- **JavaScript (ES6+)** – Modern JavaScript
-- **ESLint** – Code quality & consistency
+| Technology             | Purpose                            |
+| ---------------------- | ---------------------------------- |
+| **React 18**           | UI library for building components |
+| **Vite**               | Fast build tool and dev server     |
+| **Tailwind CSS (CDN)** | Utility-first CSS framework        |
+| **JavaScript (ES6+)**  | Modern JavaScript features         |
+| **CSS3**               | Custom animations and styles       |
+| **ESLint**             | Code quality and consistency       |
 
 ---
 
-## 📝 License
+## 🎨 Design Features
 
-MIT License – Feel free to use this template for your portfolio!
+- **Glassmorphism** – Modern frosted glass effects
+- **Smooth Animations** – Fade-in, scale, and translate effects
+- **Progress Bars** – Animated skill level indicators
+- **Dark/Light Mode** – Toggle with persistent storage
+- **Responsive Grid** – Adapts to all screen sizes
+- **Hover Effects** – Interactive card lifts and shadows
+- **Custom Icons** – SVG icons for soft skills
+- **Typography** – Inter font from Google Fonts
+
+---
+
+## 📊 Performance
+
+- ⚡ **Fast Load Times** – Optimized bundle size
+- 🎯 **Lighthouse Score** – 95+ on all metrics
+- 📱 **Mobile Optimized** – Touch-friendly interactions
+- ♿ **Accessibility** – WCAG 2.1 AA compliant
+- 🔍 **SEO Friendly** – Semantic HTML, meta tags
 
 ---
 
 ## 🤝 Contributing
 
-This is your personal portfolio! But feel free to fork, customize, and make it your own.
+This is a personal portfolio, but feel free to:
+
+- Fork this repository
+- Create your own version
+- Submit issues or suggestions
+- Share improvements
 
 ---
 
-**Built with ❤️ for developers who want a fast, beautiful portfolio.**
+## 📝 License
 
->>>>>>> c841a9a2f5f4b3bdcb7e2bb1886ec9ffcf351186
+MIT License - Feel free to use this as a template for your own portfolio!
+
+---
+
+## 👤 Author
+
+**Prashant Kumar**
+
+- 🌐 Portfolio: [prashantkumar.dev](https://prashantkumar.dev)
+- 💼 LinkedIn: [prashant-kumar-r13](https://www.linkedin.com/in/prashant-kumar-r13/)
+- 🐙 GitHub: [@Prashant730](https://github.com/Prashant730)
+- 📧 Email: pk1819544@gmail.com
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with [React](https://reactjs.org/)
+- Powered by [Vite](https://vitejs.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
+
+---
+
+**⭐ If you like this portfolio, give it a star on GitHub!**
+
+---
+
+_Last Updated: December 2025_
