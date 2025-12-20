@@ -320,7 +320,7 @@ function App() {
               Full-Stack Developer
             </p>
             <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-6 max-w-prose">
-              Computer Science student building full-stack web applications.
+              Computer Science student building building scalable, high-performance, full-stack web applications.
                 <br />
                 Actively seeking internship opportunities in software development.
             </p>
