@@ -637,3 +637,81 @@ body {
     display: none !important;
   }
 }
+/* Project Visual Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.project-visual {
+  animation: float 3s ease-in-out infinite;
+}
+
+.project-visual-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.project-visual-shimmer {
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.1) 50%,
+    rgba(255,255,255,0) 100%);
+  background-size: 200px 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Project visual hover effects */
+.project-card:hover .project-visual {
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.project-card:hover .project-visual-glow {
+  animation: pulse-glow 1s ease-in-out infinite;
+}
+
+/* Badge pulse animation */
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-pulse-badge {
+  animation: pulse-badge 1s ease-in-out infinite;
+}
+/* Project image background styles */
+.project-visual {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover .project-visual {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth overlay transitions */
+.project-visual .absolute {
+  transition: background-color 0.3s ease;
+}
+
+/* Image loading states */
+.project-visual[style*="background-image"] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Enhanced text overlay */
+.project-visual .absolute.bottom-0 {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(1px);
+}

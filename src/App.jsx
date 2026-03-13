@@ -632,16 +632,47 @@ function App() {
             {projects.map((project) => (
               <article
                 key={project.id}
-                className={`bg-[var(--bg-secondary)] rounded-xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-                  project.featured ? 'border-green-500 border-2 col-span-full ring-2 ring-green-500/20 shadow-lg shadow-green-500/10' : 'border-[var(--border)] hover:border-green-500/50'
+                className={`project-card bg-[var(--bg-secondary)] rounded-xl border transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] ${
+                  project.featured ? 'border-green-500 border-2 col-span-full ring-2 ring-green-500/20 shadow-2xl shadow-green-500/10' : 'border-[var(--border)] hover:border-green-500/50 hover:shadow-2xl'
                 } ${expandedProject === project.id ? 'col-span-full' : ''}`}
               >
                 <div className="p-5 sm:p-6 xl:p-7">
-                  {project.featured && (
-                    <span className="inline-block bg-green-700 text-white py-1.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider mb-3 shadow-md border-2 border-green-800 drop-shadow-lg">
-                      FEATURED PROJECT
-                    </span>
-                  )}
+                  {/* Project Visual */}
+                  <div className="mb-4 relative">
+                    <div
+                      className="project-visual w-full h-48 rounded-lg overflow-hidden bg-gradient-to-br from-[var(--bg-tertiary)] to-[var(--bg-primary)] bg-cover bg-center bg-no-repeat relative"
+                      style={{
+                        backgroundImage: project.image ? `url(${project.image})` : 'none'
+                      }}
+                    >
+                      {/* Overlay for better text readability */}
+                      <div className="absolute inset-0 bg-black/40 hover:bg-black/30 transition-all duration-300"></div>
+
+                      {/* Project info overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <div className="text-sm font-semibold mb-1">{project.title}</div>
+                        <div className="text-xs opacity-90">{project.shortDesc}</div>
+                      </div>
+
+                      {/* Fallback content if no image */}
+                      {!project.image && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center text-[var(--text-muted)]">
+                            <div className="text-4xl mb-2">📁</div>
+                            <div className="text-sm">Project Preview</div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    {project.featured && (
+                      <div className="absolute -top-2 -right-2">
+                        <span className="inline-block bg-green-700 text-white py-1.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md border-2 border-green-800 drop-shadow-lg">
+                          FEATURED
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
                   <div className="flex justify-between items-center gap-3 mb-2">
                     <h3 className="text-base sm:text-lg font-semibold text-[var(--text-primary)] tracking-tight">
                       {project.title}

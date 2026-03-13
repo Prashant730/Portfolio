@@ -3,6 +3,7 @@ export const projects = [
     id: 'bidmaster',
     title: 'BidMaster',
     featured: true,
+    image: '/Screenshot%202026-03-13%20150242.png',
     shortDesc:
       'Real-time auction platform with live bidding, role-based access, and admin controls.',
     tech: [
@@ -34,6 +35,7 @@ export const projects = [
     id: 'birdnet',
     title: 'BirdNet',
     featured: false,
+    image: '/Screenshot%202026-03-13%20150311.png',
     shortDesc:
       'Production website for a real business with responsive design and SEO optimization.',
     tech: ['React', 'Vite', 'Tailwind CSS'],
@@ -56,6 +58,7 @@ export const projects = [
     id: 'career-guidance',
     title: 'Career Guidance Platform',
     featured: false,
+    image: '/Screenshot%202026-03-13%20150234.png',
     shortDesc:
       'Skill-based career recommendation system with role-based dashboards.',
     tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
@@ -78,6 +81,7 @@ export const projects = [
     id: 'learning-tutor',
     title: 'Learning Tutor',
     featured: false,
+    image: '/Screenshot%202026-03-13%20150223.png',
     shortDesc: 'Frontend learning platform for tutor-student interaction.',
     tech: ['JavaScript', 'HTML', 'CSS'],
     problem:
