@@ -810,7 +810,7 @@ function App() {
               <div className="education-item">
                 <h4 className="text-base font-semibold text-[var(--text-primary)] mb-1">B.Tech in Computer Science</h4>
                 <p className="text-[var(--text-secondary)] text-base mb-1">Lovely Professional University (2023 - 2027)</p>
-                <p className="text-[var(--accent)] font-semibold text-sm">CGPA: 6.76</p>
+                <p className="text-[var(--accent)] font-semibold text-sm">CGPA: 6.95</p>
               </div>
               <div className="border-b border-[var(--border)] my-2"></div>
               <div className="education-item">
