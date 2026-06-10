@@ -45,4 +45,11 @@ Each project card now displays a background image with an overlay containing the
 
 ## Current Example:
 
-The BidMaster project is currently using a temporary image (`/picture.jpg`) to demonstrate the functionality. Replace this with an actual project screenshot.
+The portfolio now uses these stable filenames:
+
+- `/bidmaster-preview.jpg`
+- `/birdnet-preview.jpg`
+- `/career-guidance-preview.jpg`
+- `/learning-tutor-preview.jpg`
+
+Keep these names if you want to replace screenshots without touching code.

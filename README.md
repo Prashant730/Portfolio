@@ -2,7 +2,7 @@
 
 > A modern, responsive, and accessible portfolio website built with **React** and **Tailwind CSS** (CDN)
 
-[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-CDN-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -83,23 +83,28 @@ npm run preview
 Portfolio/
 ├── public/                       # Static assets
 │   ├── picture.jpg              # Profile image
+│   ├── bidmaster-preview.jpg    # Project screenshot
+│   ├── birdnet-preview.jpg      # Project screenshot
+│   ├── career-guidance-preview.jpg # Project screenshot
+│   ├── learning-tutor-preview.jpg  # Project screenshot
 │   ├── Cloud Computing.pdf      # Certificates
-│   ├── CPP Certificate.pdf
-│   ├── Mind Sprint Certificate.pdf
+│   ├── cpp.pdf
+│   ├── hackathon.pdf
 │   └── generalCV.pdf            # Resume/CV
 │
 ├── src/
-│   ├── App.jsx                  # Main portfolio component
+│   ├── App.jsx                  # App state + section orchestration
 │   ├── App.css                  # Custom styles & animations
 │   ├── main.jsx                 # React entry point
 │   ├── index.css                # Base styles
+│   ├── components/              # Reusable UI sections/components
 │   └── data/
 │       ├── index.js             # Data exports
 │       ├── projects.js          # Project details
 │       ├── skills.js            # Technical skills
 │       └── achievements.js      # Achievements & awards
 │
-├── index.html                   # HTML entry (CDN scripts)
+├── index.html                   # HTML entry (Tailwind CDN script)
 ├── vite.config.js              # Vite configuration
 ├── eslint.config.js            # ESLint rules
 ├── package.json                # Dependencies
@@ -113,7 +118,7 @@ Portfolio/
 ### Update Personal Information
 
 1. **Profile Image**: Replace `public/picture.jpg` with your photo
-2. **Resume/CV**: Add your resume as `public/resume.pdf`
+2. **Resume/CV**: Add your resume as `public/generalCV.pdf`
 3. **Certificates**: Add certificate PDFs to `public/` folder
 
 ### Modify Content
@@ -169,7 +174,7 @@ export const achievements = [
 ### Customize Styling
 
 - **Colors & Theme**: Edit CSS variables in `src/App.css` and `src/index.css`
-- **Tailwind Config**: Modify `tailwind.config` in `index.html` (CDN-based)
+- **Tailwind CDN**: Tailwind is loaded via CDN in `index.html`
 - **Animations**: Customize keyframes in `src/App.css`
 
 ---
@@ -214,7 +219,7 @@ For protected files (like private certificates or resumes), consider:
 
 | Technology             | Purpose                            |
 | ---------------------- | ---------------------------------- |
-| **React 18**           | UI library for building components |
+| **React 19**           | UI library for building components |
 | **Vite**               | Fast build tool and dev server     |
 | **Tailwind CSS (CDN)** | Utility-first CSS framework        |
 | **JavaScript (ES6+)**  | Modern JavaScript features         |

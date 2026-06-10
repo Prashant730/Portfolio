@@ -1,20 +1,29 @@
 export const skills = {
   languages: [
-    { name: 'C++', level: 'Intermediate', percent: 55 },
-    { name: 'Java', level: 'Intermediate', percent: 60 },
-    { name: 'Data Structures & Algorithms', level: 'Beginner', percent: 30 },
-  ],
-  backend: [
-    { name: 'Node.js / Express', level: 'Beginner', percent: 30 },
-    { name: 'REST API Design', level: 'Beginner', percent: 15 },
+    { name: 'JavaScript (ES6+)' },
+    { name: 'Java' },
+    { name: 'C++' },
   ],
   frontend: [
-    { name: 'React', level: 'Beginner', percent: 40 },
-    { name: 'JavaScript', level: 'Intermediate', percent: 65 },
-    { name: 'HTML/CSS & Tailwind', level: 'Strong', percent: 80 },
+    { name: 'React.js' },
+    { name: 'Vite' },
+    { name: 'HTML5' },
+    { name: 'CSS3' },
+    { name: 'Tailwind CSS' },
+  ],
+  backend: [
+    { name: 'Node.js' },
+    { name: 'Express.js' },
+  ],
+  databases: [
+    { name: 'MongoDB (schema design, indexing)' },
+    { name: 'MySQL' },
   ],
   tools: [
-    { name: 'Git & GitHub', level: 'Intermediate', percent: 71 },
-    { name: 'MongoDB', level: 'Intermediate', percent: 65 },
+    { name: 'AWS (EC2, S3, Lambda, IAM Roles)' },
+    { name: 'Git' },
+    { name: 'GitHub' },
+    { name: 'Vercel' },
+    { name: 'XAMPP' },
   ],
 }
